@@ -58,11 +58,6 @@ const App = () => {
 
 	return (
 		<div className='ui container'>
-			<br />
-			{
-				//
-			}
-			{}
 			<Tabs>
 				<TabList>
 					<Tab>Accordion</Tab>
@@ -88,6 +83,9 @@ const App = () => {
 							onSelectedChange={setSelected}
 						/>
 					) : null}
+					<div style={{ color: `{colorOptions.value}` }}>
+						Color {colorOptions.value} is selected
+					</div>
 				</TabPanel>
 				<TabPanel>
 					<Search />
