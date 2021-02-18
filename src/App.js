@@ -76,16 +76,34 @@ const App = () => {
 						Toggle Dropdown
 					</button>
 					{showDropdown ? (
-						<Dropdown
-							heading='Choose any color'
-							options={colorOptions}
-							selected={selected}
-							onSelectedChange={setSelected}
-						/>
+						<div>
+							<Dropdown
+								heading='Choose any color'
+								options={colorOptions}
+								selected={selected}
+								onSelectedChange={setSelected}
+							/>
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<div className='ui column container padded grid'>
+								<div
+									class={`${selected.value} column`}
+									style={{ textAlign: 'center' }}>
+									{selected.value.toUpperCase()}
+								</div>
+							</div>{' '}
+						</div>
 					) : null}
-					<div style={{ color: `{colorOptions.value}` }}>
-						Color {colorOptions.value} is selected
-					</div>
 				</TabPanel>
 				<TabPanel>
 					<Search />
